@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_010_pseude.html</title>
+    <style>
+      /*nth-child(n)와 nth-of-type(n)*/
+
+      /* 짝수에만 적용
+      p:nth-of-type(even) {
+        background-color: aqua;
+      }
+      */
+      /* 짝수에만 적용
+      p:nth-of-type(2n) {
+        background-color: red;
+      }
+      */
+
+      p:nth-of-type(odd) {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>computer</p>
+      <span>test</span>
+      <p>moniter</p>
+      <p>television</p>
+      <p>desk</p>
+      <p>top</p>
+    </div>
+  </body>
+</html>
