@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_048_popup.html</title>
+    <script defer src="js/js_048_popup.js"></script>
+    <style>
+      #pt {
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      윤석열 정부가 외교전략 보고서를 공개하면서 정부 외교 '방점'이 어디 찍혀
+      있는지 모든 아침신문이 주목했다. 정부는 나토(북대서양조약기구),
+      쿼드(미국·일본·인도·호주의 안보 협의체) 등 한미동맹 강화 기조를
+      재확인하면서도 협력 대상에 중국을 언급했다. 언론이 강조하는 포인트는
+      제각기 달랐다. 경향신문과 한겨레는 '미국 편중'을 우려했고 동아일보와
+      조선일보 등은 중국 협력 방침에 주목했다. 지나치게 포괄적이라며 실현
+      가능성에 의문을 던진 신문도 있었다.노동조합에 이어 시민단체가 정부의 다음
+      타깃이 됐다. 정부는 28일 시민단체에 지급된 국고보조금을 두고 전면 감사에
+      착수한다고 밝혔다. 정부는 문재인 정부에서 정부 보조금이 연평균 4000억 원
+      증가했지만 2016년 이후 전 부처에서 적발한 문제사업은 153건, 환수금액은
+      34억 원으로 평균 2000만 원 환수에 불과했다고 설명했다. 한겨레는 보수층
+      집결로 지지율 상승을 경험한 정부가 '갈라치기'에 열중한다고 비판했다.
+      노웅래 더불어민주당 의원 체포동의안이 의원 271명 중 찬성 101표, 반대
+      161표, 기권 9표로 국회에서 부결됐다. 국민의힘은 물론 정의당 의원 6명까지
+      '방탄 국회'라며 찬성 입장을 밝혔지만 민주당 의원 대부분이 반대하면서
+      부결됐다. 민주당은 민심 역풍을 맞을 수 있다고 우려하면서도 윤석열 정부의
+      정치 검찰에 대한 견제가 더 필요하다고 봤다 . 조선일보는 “사안 자체가
+      명백한 개인 비리”라며 불체포특권이 없어져야 한다고 주장했다.
+    </div>
+    <div id="pt">
+      <img src="images/popup.jpg" usemap="#pop" />
+      <map name="pop" id="pop">
+        <!-- coors='x start, y start, x end, y end' -->
+        <area
+          shape="rect"
+          coords="255,332,290,345"
+          href="#"
+          alt="창닫기"
+          <!--
+          onclick="window.close"
+          --
+        />
+        />
+      </map>
+    </div>
+  </body>
+</html>
