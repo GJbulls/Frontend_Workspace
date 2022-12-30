@@ -1,10 +1,131 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index.html</title>
+    <meta charset="utf-8" />
+    <title>indet.html</title>
+    <link rel="stylesheet" href= "css/my_css.css" />
+    <script src="js/hp.js"></script>
   </head>
-  <body></body>
+
+  <body>
+    <!-- A -->
+    <header class="ibx top">
+      <div class="pbx top1">
+        <h1 class="logo">
+          <a href="#">
+            <img src="images/loco.jpg" alt="logo" />
+          </a>
+        </h1>
+      </div>
+      <div class="pbx top2 prt">
+        <ul class="gnb">
+          <li>
+            <a href="#">카테고리</a>
+            <ol>
+              <li><a href="#">아우터</a></li>
+              <li><a href="#">티&니트</a></li>
+              <li><a href="#">하의</a></li>
+            </ol>
+          </li>
+          <li>
+            <a href="#">세일</a>
+            <ol>
+              <li><a href="#">쿠폰</a></li>
+              <li><a href="#">타임세일</a></li>
+              <li><a href="#">기획전</a></li>
+            </ol>
+          </li>
+          <li>
+            <a href="#">코디샵</a>
+            <ol>
+              <li><a href="#">코디</a></li>
+              <li><a href="#">코디맵</a></li>
+              <li><a href="#">브랜드스냅</a></li>
+            </ol>
+          </li>
+          <li>
+            <button id='sgin in'>로그인</button>
+            <button id='sgin up'>회원가입</button>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class='bener'>
+        <ul class='backgd'>
+            <li>
+                <a href="#">
+                    <img src="images/middle1.jpg" alt="제품광고">
+                </a>
+            </li>
+        </ul>
+        <main class="ibx cont">
+            <div class="pbx">
+              <!-- 탭메뉴 -->
+              <ol class="tm">
+                <li class="on" onclick="chgTab(0,1)">
+                  <a href="#">공지사항</a>
+                </li>
+                <li class="off" onclick="chgTab(1,0)">
+                  <a href="#">갤러리</a>
+                </li>
+              </ol>
+              <!-- 탭내용 -->
+              <ol class="tc">
+                <!-- 공지사항 -->
+                <li class="on">
+                  <ul class="gong">
+                    <li>
+                      <a href="#" onclick="popup('block')">
+                        (Sale) 22'년 겨울 아우터 및 니트 기획전
+                      </a>
+                      <span>2022. 12. 30</span>
+                    </li>
+                    <li>
+                      <a href="#">
+                        (코디) 22'년 겨울 최신 코디, 브랜드 스냅 
+                      </a>
+                      <span>2022. 12. 23</span>
+                    </li>
+                    <li>
+                      <a href="#">
+                        [발표]『빅스마일데이 조지아 경품』 이벤트 당첨자
+                      </a>
+                      <span>2022. 12.20 </span>
+                    </li>
+                    <li>
+                      <a href="#">
+                        [신상품]『22'년 상의(니트),코트』발매 
+                      </a>
+                      <span>2022. 11. 12</span>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 갤러리 -->
+                <li>
+                  <ul class="gal">
+                    <li>
+                      <a href="#">
+                        <img src="./images/gall3.jpg" alt="갤러리이미지" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./images/gall2.jpg" alt="갤러리이미지" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./images/gall4.jpg" alt="갤러리이미지" />
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            
+          </main>
+    </section>
+    
+  </body>
 </html>
