@@ -1,22 +1,21 @@
 @charset "utf-8";
+/* 메인 CSS - main.css */
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
 }
 body {
-  color: rgb(0, 0, 0);
-}
-
-a {
   color: #333;
+}
+a {
+  color: rgb(2, 2, 2);
   text-decoration: none;
 }
 
-/* body *{
-    outline: 2px dashed blue;
-} */
+ body *{
+    outline: 2px dashed rgb(207, 207, 238);
+} 
 ul,
 ol {
   padding: 0;
@@ -73,7 +72,7 @@ li {
   /* 부모는? 싸고있는 .pbx.prt */
   width: 800px;
   height: 50px;
-  background-color: #333(117, 188, 255);
+  background-color: rgb(246, 246, 246);
 }
 .gnb li {
   width: 200px;
@@ -90,12 +89,11 @@ li {
   font-weight: bold;
   line-height: 50px;
   text-align: center;
-  color: white;
 }
 /* 서브메뉴 */
 .gnb ol {
   height: 0; /* 200px; */
-  background-color: rgba(246, 247, 248, 0.9);
+  background-color: rgba(218, 238, 255, 0.9);
   overflow: hidden; /* 숨기기 */
   transition: height 0.4s;
 }
@@ -113,105 +111,37 @@ li {
 /* 하이라이트 설정 */
 /* 상위,하위메뉴 */
 .gnb li:hover > a {
-  color: white;
+  color: #fff;
 }
 /* 하위메뉴 */
 .gnb ol li:hover a {
-  background-color: rgb(5, 5, 5);
-}
-.bener {
-  height: 579px;
-  width: 1200px;
-}
-section {
-  justify-content: center;
-  display: block;
-  text-align: center;
-}
-section,
-img {
-  width: 60%;
+  background-color: rgb(0, 54, 233);
 }
 
-/*|||||||||||||||||||||||||||||||||||||||||||||||||*/
-
-/* 파티션가로값 (한꺼번에 등분할!) */
-.cont > .pbx {
-  width: 400px;
+/******************* B *******************/
+.ban {
+  height: 300px;
+  overflow: hidden; /*넘치는 슬라이드 숨기기  */
 }
-/* 탭메뉴 */
-.tm {
-  width: 200px;
-  height: 40px;
+/* 슬라이드 */
+.slide {
+  position: relative;
+  top: 0;
 }
-.tm li a {
-  display: block;
-  width: 100px;
-  text-align: center;
-  line-height: 40px;
-  background-color: rgb(94, 169, 255);
+/******************* B *******************/
+.ban1 {
+  height: 300px;
+  overflow: hidden; /*넘치는 슬라이드 숨기기  */
 }
-/* 선택된 탭class */
-.tm li.on a {
-  background-color: #fff;
+/* 슬라이드 */
+.slide_01 {
+  position: relative;
+  top: 0;
 }
-
-/* 탭내용박스 */
-.tc {
-  height: 138px;
-  background-color: #fff;
-}
-/* 탭내용박스 li - 2개 */
-.tc > li {
-  width: 100%;
-  height: 100%;
-  display: none; /* 모두안보임 */
-}
-/* 선택된 탭내용박스 li 클래스 */
-.tc > li.on {
-  display: block;
-}
-
-/* 공지사항 리스트박스 */
-.gong {
-  padding-top: 9px;
-  padding-left: 7px;
-}
-.gong li {
-  float: none;
-  line-height: 24px;
-}
-.gong a {
-  display: inline-block;
-  /* 줄안바뀌면서 width디자인 적용위해 */
-  width: 270px;
-
-  /* 아래 3가지로 한줄짜리 말줄임표시하기 */
-  white-space: nowrap;
-  /* 1.줄바꿈방지 */
-  overflow: hidden;
-  /* 2.넘치는 글자숨기기 */
-  text-overflow: ellipsis;
-  /* 3.텍스트 말줄임표시 */
-}
-
-/* 날짜표시 오른쪽끝으로 */
-.gong span {
-  float: right;
-  padding-right: 5px;
-}
-
-/* 갤러리 리스트박스 */
-.gal li {
-  margin: 18px 12px;
-}
-.gal img {
-  width: 100px;
-  border: 1px solid #777;
-}
+/********************** C **********************/
 .cont {
   height: 200px;
-  background-color: rgb(2, 2, 2);
+  background-color: rgb(255, 255, 255);
 }
 /* 파티션가로값 (한꺼번에 등분할!) */
 .cont > .pbx {
@@ -228,7 +158,7 @@ img {
   width: 100px;
   text-align: center;
   line-height: 40px;
-  background-color: rgb(145, 224, 40);
+  background-color: rgba(69, 187, 161, 0.074);
 }
 /* 선택된 탭class */
 .tm li.on a {
@@ -266,6 +196,7 @@ img {
   width: 270px;
 
   /* 아래 3가지로 한줄짜리 말줄임표시하기 */
+  color: #333;
   white-space: nowrap;
   /* 1.줄바꿈방지 */
   overflow: hidden;
@@ -287,4 +218,67 @@ img {
 .gal img {
   width: 100px;
   border: 1px solid #777;
+}
+
+/* 팝업창 */
+.pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 15px;
+  z-index: 999;
+  background-color: #fff;
+  border: 3px solid #888;
+  display: none; /* 처음에 안보임! */
+}
+.pop h1 {
+  /* 팝업제목 */
+  font-size: 24px;
+  text-align: center;
+}
+.pop p {
+  /* 팝업내용문단 */
+  line-height: 30px;
+}
+/* 닫기버튼박스 */
+.bbx {
+  text-align: right;
+  /* button요소는 inline-block이므로 
+    인라인처럼 텍스트정렬이 적용된다! */
+}
+
+/* 배너, 바로가기 이미지 공통
+.im {
+  width: 100%;
+  height: 100%;
+} */
+
+/******************** D ********************/
+.info {
+  height: 100px;
+  background-color: #ccc;
+}
+/* 파티션가로값 */
+.info1 {
+  width: 200px;
+}
+.info2 {
+  /* 카피라잇 */
+  width: 800px;
+  text-align: center;
+  line-height: 80px;
+  /* 위아래 패딩값 20px제외 */
+  font-weight: bold;
+}
+.info3 {
+  width: 200px;
+  text-align: center;
+  line-height: 107px;
+}
+/* sns 이미지 */
+.info3 img {
+  width: 40px;
+  margin: 0 5px;
 }
