@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery002_selcctor.html</title>
+    <!-- <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        border-width: 0px;
+      }
+    </style> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('*').css({ margin: '0px', padding: '0px', 'border-width': '0px' });
+
+        $('div').css({
+          //div속성
+          'background-color': 'green',
+          width: '200px',
+          height: '200px',
+        });
+
+        $('#line').css({ color: 'orange' }); //id line
+
+        $('.common').css({ border: '1px solid black' }); //common class
+
+        $('a[href]').css({ color: 'aqua' }); //a태그안에 href속성
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <p id="line">line</p>
+    <p class="common">common</p>
+    <a href="#">korea</a>
+  </body>
+</html>
