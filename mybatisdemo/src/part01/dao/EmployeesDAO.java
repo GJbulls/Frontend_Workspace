@@ -27,7 +27,9 @@ public class EmployeesDAO {
 		return sqlSession.selectList("emp.list");
 	}
 	
-	
+	public List<EmpDTO> getSearchListMethod(SqlSession sqlSession, String data){
+		return sqlSession.selectList("emp.searchList",data);
+	}
 	
 }//end class
 

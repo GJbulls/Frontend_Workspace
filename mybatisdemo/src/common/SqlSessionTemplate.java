@@ -16,7 +16,7 @@ public class SqlSessionTemplate {
 		 
 	}
 	
-	private static SqlSessionFactory setsqlSessionFactory() {
+	public static SqlSessionFactory setsqlSessionFactory() {
 		
 		
 		

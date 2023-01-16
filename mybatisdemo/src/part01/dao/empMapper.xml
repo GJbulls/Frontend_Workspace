@@ -15,7 +15,12 @@
 	ORDER BY employee_id
 </select>
 
+<select id = "searchList" parameterType ="string" resultType = "part01.dto.EmpDTO">
+	SELECT * FROM employees
+	WHERE first_name LiKE '%' || #{data} || '%'
+	ORDER BY employee_id 
 
+</select>
 
 
 
