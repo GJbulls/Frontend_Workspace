@@ -14,6 +14,11 @@ public class MemDAO {
 	public int setInsertMethod(SqlSession sqlSession, MemDTO dto) {
 		return sqlSession.insert("mem.memInsert",dto);
 	}
-	
+	public int setUpdateMethod(SqlSession sqlSession, MemDTO dto) {
+		return sqlSession.update("mem.memUpdate",dto);
+	}
+	public int setDeleteMethod(SqlSession sqlSession, int num) {
+		return sqlSession.delete("mem.memDelete",num);
+	}
 	
 }

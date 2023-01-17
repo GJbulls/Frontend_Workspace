@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import part02.dto.MemDTO;
 import part02.service.MemService;
 
-//http://localhost:8090/mybatisdemo/memList
+//http://localhost:8090/mybatisdemo/empDeptJoin
 
-@WebServlet("/memList")
+@WebServlet("/empDeptJoin")
 public class MemController extends HttpServlet{
 	private MemService service;
 

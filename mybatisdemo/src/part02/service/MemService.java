@@ -36,7 +36,7 @@ public class MemService {
 	
 	public int setInsertProcess(MemDTO dto){
 		SqlSession sqlSession = null;
-		List<MemDTO> aList = null;
+		List<MemDTO> aList = null; 
 		int chk = 0;
 		try {
 			sqlSession = factory.openSession(false);
@@ -50,7 +50,56 @@ public class MemService {
 		}
 		return chk;
 	}//end setInsertProcess()
-}
+	public int setUpdateProcess(MemDTO dto) {
+		
+		SqlSession sqlSession = null;
+		int chk = 0;
+		
+		try {
+			sqlSession = factory.openSession(false);
+			chk = dao.setUpdateMethod(sqlSession, dto);
+			sqlSession.commit();
+		}catch(Exception e){
+			System.out.println(e.toString());
+			sqlSession.rollback();
+		}finally {
+			sqlSession.close();
+		}
+		return chk;
+	}//end UpdateProcess()
+	
+	public int setDeleteProcess(int num) {
+		SqlSession sqlSession = null;
+		int chk = 0;
+		
+		try {
+			sqlSession = factory.openSession(false);
+			chk = dao.setDeleteMethod(sqlSession, num);
+			sqlSession.commit();
+		}catch(Exception e){
+			System.out.println(e.toString());
+			sqlSession.rollback();
+		}finally {
+			sqlSession.close();
+		}
+		return chk;
+		
+		
+		
+	}//end DeleteProcess
+	
+	
+	
+}//end class
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11,10 +11,35 @@
  	 	</select>
  	 	<insert id = "memInsert" parameterType = "part02.dto.MemDTO">
  	 		INSERT INTO mem(num, name, age, loc)
- 	 		VALUES(mem_num_seq.nextval, #{name},#{age},#{loc})
+ 	 		VALUES(mem_num_seq.nextval, #{name, jdbcType=VARCHAR},#{age},#{loc})
+			<!--null값을 넘겨줬을때 이상이 발생되면 jdbcType=VARCHAR 삽입-->
  	 	 </insert>
- 	 	
- </mapper>   
+ 	 	 <update id="memUpdate" parameterType="part02.dto.MemDTO">
+ 	 		UPDATE mem set name=#{name},age=#{age},loc=#{loc}
+ 	 		WHERE num=#{num}	 
+ 	 	 	 	  	 	  	 	  
+ 	 	 </update>
+ 	 	 
+ 	 	 <delete id="memDelete" parameterType="int">
+ 	 	 	DELETE FROM mem
+ 	 	 	WHERE num=#{num}
+ 	 	 </delete>
+ 	 	 
+ 	 	 
+ 	 	 
+ 	 	 
+ 	 	 
+ 	 	 
+ 	  </mapper>   
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
