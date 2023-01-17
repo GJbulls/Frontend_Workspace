@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+ <mapper namespace="mem">
+ 		<select id="list" resultType = "part02.dto.MemDTO">
+ 		<!-- num으로 오름차순해서 가져옴 -->
+ 		SELECT * FROM mem
+ 		ORDER BY num
+ 	 	</select>
+ 	 	<insert id = "memInsert" parameterType = "part02.dto.MemDTO">
+ 	 		INSERT INTO mem(num, name, age, loc)
+ 	 		VALUES(mem_num_seq.nextval, #{name},#{age},#{loc})
+ 	 	 </insert>
+ 	 	
+ </mapper>   
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -17,5 +17,6 @@
 	</environments>
 	<mappers>
 		<mapper resource="part01/dao/empMapper.xml" />
+		<mapper resource="part02/config/memMapper.xml" />
 	</mappers>
 </configuration>
